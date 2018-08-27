@@ -1,0 +1,180 @@
+html>*{
+	font-family: 'Fjalla One', sans-serif;
+}
+
+#app{
+/*	background: linear-gradient(180deg, #4b6cb7 0%, #182848 100%);*/
+}
+
+#burger{
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: white;
+	z-index: 10;
+	transition: all .4s;
+	transition-timing-function: ease-out;
+}
+#burger:hover{
+	cursor: pointer;
+}
+#burger:hover>div:first-child{
+	transition: all .4s;
+	transform: rotate(45deg); transform-origin: top left 0
+}
+#burger:hover > div:nth-child(2){
+	background: transparent;
+}
+#burger:hover>div:last-child{
+	transition: all .4s;
+	transform: rotate(-45deg); transform-origin: bottom left 0
+}
+#burger div{
+	height: 3px;
+	width: 20px;
+	background: white;
+	margin: 4px 0 4px 0;
+}
+.burger_hide{
+	left:0px;
+}
+.burger_show{
+	left: 260px !important;
+}
+
+#container{
+	width: 414px;
+	height: 735px;
+	display:flex;
+	flex-direction: column;
+	background: #182848;
+}
+
+#app_header{
+	display: flex;
+	flex: 2;
+	order: 1;
+	flex-direction: column;
+}
+
+#location{
+	display: flex;
+	flex:1;
+	order: 1;
+	margin: auto;
+
+    font-size: 4em;
+    font-weight: bold;
+    opacity: 0.5;
+    color: #B8B1DC;
+}
+
+#location h1{
+	margin-top: auto;
+	display: flex;
+}
+
+#app_temp_icon{
+	display: flex;
+	flex: 1;
+	order: 2;
+	justify-content: space-between;
+}
+#current_weather{
+	order: 3;
+	flex:1;
+	margin: auto;
+
+	font-size: 2em;
+    font-weight: bold;
+    opacity: 0.5;
+    color: #B8B1DC;
+}
+#icon{
+	order: 2;
+	width: 42%;
+	margin: auto;
+}
+#icon .wi{
+	font-size: 6em;
+	color: white
+}
+
+#temperture{
+	width: 42%;
+	order: 1;
+	margin: auto;
+	color: white;
+	font-size: 6em;
+	font-weight: 300;
+	text-align: right;
+}
+
+/* list styling */
+#app_list{
+	display: flex;
+	flex:1;
+	order: 2;
+	flex-direction: column;
+	text-align: center;
+	color: aliceblue;
+	padding-bottom: 2em;
+}
+#app_list div{
+	flex: 1;
+	font-size: 1.2em;
+}
+
+#app_list .single_list_container{
+	display: flex;
+}
+#app_list .single_list_title{
+	flex:2;
+	color: #B8B1DC;
+	font-size: 1.5em;
+}
+#app_list .day{
+	flex: 1;
+	text-align: right;
+}
+#app_list .single_temp{
+	flex: 1;
+}
+#app_list i {
+	flex: 1;
+	text-align: left;
+}
+
+/* STYLES FOR SIDEBAR */
+#sidebar{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0px;
+	z-index: 11;
+	height: 735px;
+	width: 250px;
+	background: #e3e3e3;
+	transition: all .4s;
+	font-size: 2em;
+	line-height: 2.1em;
+	transition-timing-function: ease-out;
+}
+.sidebar_hide{
+	left:-250px;
+}
+.sidebar_show{
+	left: 0px;
+}
+
+#sidebar div{
+	flex:1;
+	padding-left: 25px;
+	padding-top: 100px;	
+}
+#sidebar #copyright{
+	font-size: .5em;
+	color:gray;
+	text-align: center;
+}
